@@ -1,2 +1,5 @@
-# StyleBlend
-Official Implementation of StyleBlend [conditionally accepted to Eurographics 2025]
+# StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models
+
+Code is coming soon...
+
+
