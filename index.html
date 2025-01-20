@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>StyleBlend</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/zichongc" target="_blank">Zichong Chen</a>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Shijin Wang</a>,</span>
+                  <span class="author-block">
+                    <a href="https://zhouyangvcc.github.io/" target="_blank">Yang Zhou</a><sup>*</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Visual Computing Research Center, CSSE, Shenzhen University<br></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Paper</span>
+                        </a>
+                      </span>
+
+                    <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/zichongc/StyleBlend" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero teaser">
+    <div class="hero-body">
+      <div class="container">
+        
+        <h2 class="subtitle has-text-justified">
+          <b>TL;DR:</b> A finetuning-based approach for style-specific text-to-image generation that ensures robust style consistency and aligns text semantics.
+        </h2>
+        <div class="item">
+          <img src="static/images/teaser.jpg" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column custom-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Synthesizing visually impressive images that seamlessly align both text prompts and specific artistic styles remains a significant challenge in Text-to-Image (T2I) diffusion models. This paper introduces StyleBlend, a method designed to learn and apply style representations from a limited set of reference images, enabling content synthesis of both text-aligned and stylistically coherent. Our approach uniquely decomposes style into two components, composition and texture, each learned through different strategies. We then leverage two synthesis branches, each focusing on a corresponding style component, to facilitate effective style blending through shared features without affecting content generation. StyleBlend addresses the common issues of text misalignment and weak style representation that previous methods have struggled with. Extensive qualitative and quantitative comparisons demonstrate the superiority of our approach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">Method</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <h2 class="title is-5">Style Representation Learning</h2>
+        <img id="overview" width="100%" src="./static/images/training.jpg">
+      </div>
+      <div class="item">
+        <h2 class="title is-5">Dual-Branch Inference</h2>
+        <img id="overview" width="48%" src="./static/images/dualbranch.jpg">
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">
+      
+      <h2 class="title is-3">Gallery of StyleBlend Results</h2>
+
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img id="overview" width="75%" src="./static/images/gallery.jpg">
+      </div>
+      <div class="item">
+        <img src="static/images/styleB01.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB05.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB07.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB08.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB09.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB11.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB12.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB16.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB18.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB21.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB23.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB24.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB25.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <img src="static/images/styleB27.jpg" alt="MY ALT TEXT"/>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">   
+      <h2 class="title is-3">Qualitative Comparisons</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+         <img id="overview" width="100%" src="./static/images/comp_3shot.jpg">
+        </div>
+        <div class="item">
+          <img id="overview" width="57%" src="./static/images/comp_1shot.jpg">
+        </div>
+      </div>
+      
+      <div class="item">
+        <br><br><br>
+        <h2 class="title is-3">Quantitative Comparisons</h2>
+        <img id="overview" width="57%" src="./static/images/quantitative_comp.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">Applications & Variations</h2>
+      <div class="item">
+        <img id="overview" width="80%" src="./static/images/application.jpg">
+      </div>
+      <br>
+      <div class="item">
+        <img id="overview" width="60%" src="./static/images/variations.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{chen2025styleblend,
+  title = {StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models},
+  author = {Zichong Chen, Shijin Wang, Yang Zhou},
+  booktitle = {Eurographics},
+  year = {2025}
+}</code></pre>
+  </div>
+</section>
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
