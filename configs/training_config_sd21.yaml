@@ -1,0 +1,64 @@
+seed: 2025
+device: 'cuda'
+sample_dir: './data'
+output_dir: './checkpoints/sd21'
+pretrained_model_path: 'stabilityai/stable-diffusion-2-1'
+
+
+texture_style_training:
+  resolution: 768
+  placeholder: "<T>"
+  init_token: "artistic"
+  batch_size: 1
+  gradient_accumulation_steps: 1
+
+  textual_inversion:
+    max_train_steps: 500
+    learning_rate: 0.001  
+    adam_beta1: 0.85
+    adam_beta2: 0.999
+    adam_weight_decay: 1.0e-2
+    adam_epsilon: 1.0e-8
+    gradient_accumulation_steps: ${texture_style_training.gradient_accumulation_steps}
+
+  dreambooth_lora:
+    max_train_steps: 500
+    rank: 16
+    learning_rate: 0.0001
+    adam_beta1: 0.9
+    adam_beta2: 0.999
+    adam_weight_decay: 1.0e-2
+    adam_epsilon: 1.0e-8
+    gradient_accumulation_steps: ${texture_style_training.gradient_accumulation_steps}
+
+
+composition_style_training:
+  # dataset
+  k: 15  # how many instances to generate for each example
+  select_n: 10  # how many instances to be selected as training data from generated candidates. Lower than `k`.
+  resolution: 768
+  dir_to_save_dataset: './data/plausible'
+
+  # CLIP model is solely used to assist data filtering during dataset creation process, not for training purposes.
+  # It can be set it to null if we choose not to use the CLIP model for data creation.
+  # Alternatively, we can manually filter a generated set of images, which may result in a higher quality dataset.
+  # Note that using the CLIP model offers an automated and user-friendly approch for data creation.
+  pretrained_clip_model: 'openai/clip-vit-large-patch14'
+  # pretrained_clip_model: null
+
+  # composition style embeddings
+  placeholder: "<C>"
+  init_token: "&"
+
+  # lora for text encoder
+  rank: 16
+
+  # training
+  max_train_steps: 300
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  lr: 1.0e-4
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_weight_decay: 1.0e-2
+  adam_epsilon: 1.0e-8

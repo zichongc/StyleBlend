@@ -1,0 +1,65 @@
+{
+    "style1": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.3,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    },
+    "style2": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.3,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    },
+    "style3": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.3,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    },
+    "style4": {
+        "c2t_self_attn_layers_to_register": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "t2c_self_attn_layers_to_register": [0, 1, 13, 14, 15], 
+        "scale": 0.5,
+        "c2t_step_ratio": 0.9,
+        "t2c_step_ratio": 0.6
+    },
+    "style5": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.3,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    },
+    "style6": {
+        "c2t_self_attn_layers_to_register": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "t2c_self_attn_layers_to_register": [0, 1, 13, 14, 15],
+        "scale": 0.5,
+        "c2t_step_ratio": 0.9,
+        "t2c_step_ratio": 0.6
+    },
+    "style7": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.3,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    },
+    "style8": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.1,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    },
+    "style9": {
+        "c2t_self_attn_layers_to_register": [4, 5, 6, 7, 8, 9],
+        "t2c_self_attn_layers_to_register": [0, 1, 2, 3, 10, 11, 12, 13, 14, 15],
+        "scale": 0.3,
+        "c2t_step_ratio": 0.8,
+        "t2c_step_ratio": 0.6
+    }
+}

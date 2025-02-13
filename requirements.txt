@@ -1,0 +1,12 @@
+diffusers==0.32.1
+numpy==1.25.0
+tqdm==4.66.4
+transformers==4.48.0
+torch==2.1.0
+torchvision==0.16.0
+accelerate==1.2.1
+jupyter==1.1.1
+ipywidgets==8.1.5
+peft==0.11.1
+omegaconf
+pillow

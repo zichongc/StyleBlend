@@ -1,0 +1,15 @@
+seed: 2024
+device: 'cuda'
+sample_dir: './data'
+output_dir: './results'
+weights_dir: './checkpoints/sd21'
+pretrained_model_path: 'stabilityai/stable-diffusion-2-1'
+
+
+placeholder_composition_style: "<C>"
+placeholder_texture_style: "<T>"
+
+num_inference_steps: 30
+guidance_scale: 7.5
+negative_prompt: 'blur'
+resolution: 768
