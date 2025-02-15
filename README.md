@@ -1,7 +1,7 @@
 ## StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models
 
 <div align="center">
- <!-- <a href='https://arxiv.org/abs/2502.....'><img src='https://img.shields.io/badge/arXiv-2502....-b31b1b.svg'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+ <a href='https://arxiv.org/abs/2502.09064'><img src='https://img.shields.io/badge/arXiv-2502.09064-b31b1b.svg'></a> &nbsp;&nbsp;
  <a href='https://zichongc.github.io/StyleBlend/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 </div>
 <br></br>
@@ -40,10 +40,13 @@ Run `styleblend_sd.ipynb` step by step for inference.
 
 ###  BibTex
 ```
-@inproceedings{chen2025styleblend,
-  title = {StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models},
-  author = {Zichong Chen, Shijin Wang, Yang Zhou},
-  booktitle = {Eurographics},
-  year = {2025}
+@misc{chen2025styleblend,
+    title={StyleBlend: Enhancing Style-Specific Content Creation in Text-to-Image Diffusion Models}, 
+    author={Zichong Chen and Shijin Wang and Yang Zhou},
+    year={2025},
+    eprint={2502.09064},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2502.09064}, 
 }
 ```
